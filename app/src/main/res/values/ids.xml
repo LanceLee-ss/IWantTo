@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btn_button" type="id" />
+    <item name="btn_edittext" type="id" />
+    <item name="ct_1" type="id" />
+    <item name="iv" type="id" />
+</resources>
