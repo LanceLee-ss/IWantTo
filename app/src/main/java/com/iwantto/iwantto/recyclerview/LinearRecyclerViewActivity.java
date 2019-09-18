@@ -3,6 +3,7 @@ package com.iwantto.iwantto.recyclerview;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +23,13 @@ private RecyclerView mRvMain;
         mRvMain = findViewById(R.id.rv_main);
         mRvMain.setLayoutManager(new LinearLayoutManager(LinearRecyclerViewActivity.this));
         mRvMain.addItemDecoration(new MyDecoration());
-        mRvMain.setAdapter(new LinearAdapter(LinearRecyclerViewActivity.this));
+        mRvMain.setAdapter(new LinearAdapter(LinearRecyclerViewActivity.this, new  LinearAdapter.OnItemClickListener() {
+            @Override
+            public Void onClick(int pos) {
+                Toast.makeText(LinearRecyclerViewActivity.this, "click " +pos,Toast.LENGTH_SHORT).show();
+                return null;
+            }
+        }));
     }
 
     class MyDecoration extends RecyclerView.ItemDecoration{

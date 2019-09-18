@@ -6,10 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridView;
 
 import com.iwantto.iwantto.GridView.GridViewActivity;
 import com.iwantto.iwantto.listview.ListViewActivity;
+import com.iwantto.iwantto.recyclerview.RecyclerViewActivity;
 
 import static com.iwantto.iwantto.R.id.btn_button;
 import static com.iwantto.iwantto.R.id.btn_edittext;
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnImageView = (Button) findViewById(R.id.btn_imageview);
         mBtnListView = (Button) findViewById(R.id.btn_listview);
         mBtnGridView = (Button) findViewById(R.id.btn_gridview);
-        getmBtnRecycleVtew = findViewById(R.id.)
+        getmBtnRecycleVtew = (Button) findViewById(R.id.btn_recycleview);
         setListeners();
     }
     private void setListeners(){
@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnImageView.setOnClickListener(onClick);
         mBtnListView.setOnClickListener(onClick);
         mBtnGridView.setOnClickListener(onClick);
+        getmBtnRecycleVtew.setOnClickListener(onClick);
     }
     private class OnClick implements View.OnClickListener{
         @Override
@@ -88,6 +89,10 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_gridview:
                     //跳转到GridView演示界面
                     intent = new Intent(MainActivity.this, GridViewActivity.class);
+                    break;
+                case R.id.btn_recycleview:
+                    //跳转到RecycleView演示界面
+                    intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
                     break;
                 default:
             }
