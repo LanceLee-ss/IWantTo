@@ -10,7 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".recyclerview.PuRecycleViewActivity"></activity>
+        <activity android:name=".ProgressActivity"></activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DialogActivity" />
+        <activity android:name=".ToastActivity" />
+        <activity android:name=".WebViewActivity" />
+        <activity android:name=".recyclerview.PuRecycleViewActivity" />
         <activity android:name=".recyclerview.GridRecycleViewActivity" />
         <activity android:name=".recyclerview.HorRecycleViewActivity" />
         <activity android:name=".recyclerview.LinearRecyclerViewActivity" />
@@ -23,13 +34,7 @@
         <activity android:name=".EditTextActivity" />
         <activity android:name=".ButtonActivity" />
         <activity android:name=".TextViewActivity" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".UIActivity"></activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
