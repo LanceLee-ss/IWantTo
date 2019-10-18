@@ -4,26 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_ui"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UI"
-        android:textAllCaps="false"/>
+        android:textColor="#000"
+        android:textSize="20sp"/>
 
     <Button
-        android:id="@+id/btn_lifecycle"
+        android:id="@+id/btn_finish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LifeCycle"
+        android:text="Finish"
         android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/btn_jump"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Jump"
-        android:textAllCaps="false"/>
-
 
 </LinearLayout>
